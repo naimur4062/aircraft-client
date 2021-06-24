@@ -1,0 +1,36 @@
+.seat-calculation {
+  background-color: gray;
+  color: aqua;
+  font-weight: 900;
+  padding: 45px;
+  border-radius: 10px;
+}
+
+.booked {
+  color: red;
+}
+
+.remaining {
+  color: green;
+}
+
+.cost {
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.tax-total {
+  border-bottom: 2px solid blueviolet;
+  margin-bottom: 5px;
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.proceed button {
+  background-color: aqua;
+  color: white;
+}

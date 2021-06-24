@@ -1,0 +1,17 @@
+#from {
+  border-bottom: 1px solid gray;
+  width: 60px;
+}
+
+.plus-minus-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.plus-minus-btn button {
+  color: #3352f2;
+  font-size: 30px;
+  border: 0px;
+  background-color: #fff;
+  width: 50%;
+}

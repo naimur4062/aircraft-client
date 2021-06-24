@@ -1,0 +1,20 @@
+.brand,
+.navLink {
+  color: aqua;
+  font-weight: 700;
+  margin: 10px;
+}
+
+Nav a {
+  text-decoration: none;
+}
+
+Nav a:hover {
+  text-decoration: none;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+#toggle {
+  border: 2px solid aqua;
+}
