@@ -14,7 +14,7 @@ const Payment = () => {
     const handlePayment = (payment) => {
         const bookingDetails = { data: bookingData, ...loggedInUser, payment, date: bookingData.date };
 
-        fetch('http://localhost:5000/postBooking', {
+        fetch('https://powerful-oasis-62239.herokuapp.com/postBooking', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

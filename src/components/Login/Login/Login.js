@@ -118,55 +118,57 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <div className="loginTitle container mt-2 mb-3">
-                <h1>Please Login</h1>
-            </div>
-            <div data-aos="zoom-in" className="col-md-4 m-auto login">
-                <Card className="emailCard">
-                    <Card.Body>
-                        {newUser && <Card.Title>Create An Account</Card.Title>}
-                        {!newUser && <Card.Title>Login</Card.Title>}
-                        <Form onSubmit={handleSubmit} className="mt-5">
-                            {newUser && <Form.Group controlId="formBasicName">
-                                <Form.Control type="name" onBlur={handleBlur} name="name" className="formControl" placeholder="Your Name" required />
-                            </Form.Group>}
-                            <Form.Group controlId="formBasicEmail">
-                                <Form.Control type="email" onBlur={handleBlur} name="email" className="formControl" placeholder="username or email" required />
-                            </Form.Group>
-                            <Form.Group className="mt-2" controlId="formBasicPassword">
-                                <Form.Control type="password" onBlur={handleBlur} name="password" className="formControl" placeholder="password" required />
-                            </Form.Group>
-                            {newUser && <Form.Group className="mt-2" controlId="formBasicPassword">
-                                <Form.Control type="password" onBlur={handleBlur} name="password" className="formControl" placeholder="Conform Password" required />
-                            </Form.Group>}
-                            {newUser && <Button className="mt-5 rounded-0" type="submit">
-                                Create an Account
-                            </Button>}
-                            {!newUser && <Button className="mt-5 rounded-0" type="submit">
-                                Login
-                            </Button>}
-                            <Form.Text className="text-center mt-3" style={{ fontSize: '17px' }}>
-                                <Form.Group>
-                                    <Form.Check
-                                        onChange={() => setNewUser(!newUser)}
-                                        label="New User Sign Up"
-                                        feedback="You must agree before submitting."
-                                    />
-                                </Form.Group>
-                            </Form.Text>
-                        </Form>
-                    </Card.Body>
-                </Card>
-                <div>
-                    <h6 style={{ color: 'red', fontWeight: '700' }}>{user.error}</h6>
+        <div className="d-flex justify-content-center align-items-center">
+            <div>
+                <div className="loginTitle container mt-2 mb-3">
+                    <h1>Please Login</h1>
                 </div>
-            </div>
-            <div className="login">
-                <button onClick={handleGoogleSignIn}>
-                    <img src={googleImg} alt="" />
-                    Continue With Google
-                </button>
+                <div data-aos="zoom-in" className="col-md-4 m-auto login">
+                    <Card className="emailCard">
+                        <Card.Body>
+                            {newUser && <Card.Title>Create An Account</Card.Title>}
+                            {!newUser && <Card.Title>Login</Card.Title>}
+                            <Form onSubmit={handleSubmit} className="mt-5">
+                                {newUser && <Form.Group controlId="formBasicName">
+                                    <Form.Control type="name" onBlur={handleBlur} name="name" className="formControl" placeholder="Your Name" required />
+                                </Form.Group>}
+                                <Form.Group controlId="formBasicEmail">
+                                    <Form.Control type="email" onBlur={handleBlur} name="email" className="formControl" placeholder="username or email" required />
+                                </Form.Group>
+                                <Form.Group className="mt-2" controlId="formBasicPassword">
+                                    <Form.Control type="password" onBlur={handleBlur} name="password" className="formControl" placeholder="password" required />
+                                </Form.Group>
+                                {newUser && <Form.Group className="mt-2" controlId="formBasicPassword">
+                                    <Form.Control type="password" onBlur={handleBlur} name="password" className="formControl" placeholder="Conform Password" required />
+                                </Form.Group>}
+                                {newUser && <Button className="mt-5 rounded-0" type="submit">
+                                    Create an Account
+                                </Button>}
+                                {!newUser && <Button className="mt-5 rounded-0" type="submit">
+                                    Login
+                                </Button>}
+                                <Form.Text className="text-center mt-3" style={{ fontSize: '17px' }}>
+                                    <Form.Group>
+                                        <Form.Check
+                                            onChange={() => setNewUser(!newUser)}
+                                            label="New User Sign Up"
+                                            feedback="You must agree before submitting."
+                                        />
+                                    </Form.Group>
+                                </Form.Text>
+                            </Form>
+                        </Card.Body>
+                    </Card>
+                    <div>
+                        <h6 style={{ color: 'red', fontWeight: '700' }}>{user.error}</h6>
+                    </div>
+                </div>
+                <div className="login">
+                    <button onClick={handleGoogleSignIn}>
+                        <img src={googleImg} alt="" />
+                        Continue With Google
+                    </button>
+                </div>
             </div>
         </div>
     );

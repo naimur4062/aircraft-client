@@ -17,10 +17,10 @@ const NavBar = () => {
                             <Link to="/home"><span className="navLink">HOME</span></Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <Link to="/about"><span className="navLink">ABOUT</span></Link>
+                            <Link to="/"><span className="navLink">ABOUT</span></Link>
                         </Nav.Link>
                         <Nav.Link>
-                            <Link to="/contact"><span className="navLink">CONTACT</span></Link>
+                            <Link to="/"><span className="navLink">CONTACT</span></Link>
                         </Nav.Link>
                         <Nav.Link>
                             <Link to="/login"><span className="navLink">SIGN UP</span></Link>

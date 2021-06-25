@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useForm } from "react-hook-form";
 import './BookingSection.css';
-import { InputLabel, MenuItem, Select } from '@material-ui/core';
+import { MenuItem, Select } from '@material-ui/core';
 import { BookingContext } from '../../App';
 
 const BookingSection = () => {
@@ -12,7 +12,6 @@ const BookingSection = () => {
     const [bookingData, setBookingData] = useContext(BookingContext);
     const [businessTicketNumbers, setBusinessTicketNumber] = useState(0);
     const [economyTicketNumbers, setEconomyTicketNumber] = useState(0);
-    // console.log('bookingSection', bookingData);
 
     let businessTicketPrice;
     let economyTicketPrice;
@@ -45,12 +44,26 @@ const BookingSection = () => {
             economyPrice: economyPrice
         };
         setBookingData(bookingData);
+        if (businessTicketNumbers === undefined) {
+            alert('Before re-calculate, need to reload.')
+            document.location.reload();
+        }
+        if (economyTicketNumbers === undefined) {
+            alert('Before re-calculate, need to reload.')
+            document.location.reload();
+        }
     }
     return (
         <div className="admin-form mt-3">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="admin container shadow p-4 mb-3 mt-5 bg-body rounded">
                     <h1 style={{ color: 'grey' }}>Ticket from Dhaka Airport</h1>
+                    <div className="row">
+                        <div className="col-md-12 pt-2 form-group mx-auto">
+                            <label htmlFor="form-label">Select a date</label><br />
+                            <input name="journeyDate" type="date" className="form-control mt-2" required ref={register} />
+                        </div>
+                    </div>
                     <div className="row">
                         <div className="col-md-6 pt-2 form-group mx-auto">
                             <label htmlFor="form-label">From</label> <br />
@@ -61,6 +74,7 @@ const BookingSection = () => {
                             <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
+                                required
                                 value={destination}
                                 onChange={(e) => {
                                     setDestination(e.target.value)
@@ -73,16 +87,10 @@ const BookingSection = () => {
                             </Select>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-md-12 pt-2 form-group mx-auto">
-                            <label htmlFor="form-label">Select a Date</label><br />
-                            <input name="journeyDate" type="date" className="form-control mt-2" required ref={register} />
-                        </div>
-                    </div>
                     <div className="row pt-2">
                         <div className="col-md-6 pt-2 form-group mx-auto">
                             <label className="mb-3" htmlFor="form-label">Business Class (${businessPrice})</label> <br />
-                            <InputLabel id="demo-simple-select-helper">Select Ticket Number</InputLabel>
+                            <label htmlFor="form-label">Select Ticket Number</label><br />
                             <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
@@ -91,6 +99,7 @@ const BookingSection = () => {
                                     setBusinessTicketNumber(e.target.value);
                                 }}
                             >
+                                <MenuItem value="0">0</MenuItem>
                                 <MenuItem value="1">1</MenuItem>
                                 <MenuItem value="2">2</MenuItem>
                                 <MenuItem value="3">3</MenuItem>
@@ -100,7 +109,7 @@ const BookingSection = () => {
                         </div>
                         <div className="col-md-6 pt-2 form-group mx-auto">
                             <label className="mb-3" htmlFor="form-label">Economy Class (${economyPrice})</label> <br />
-                            <InputLabel id="demo-simple-select-helper">Select Ticket Number</InputLabel>
+                            <label htmlFor="form-label">Select Ticket Number</label><br />
                             <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
@@ -109,6 +118,7 @@ const BookingSection = () => {
                                     setEconomyTicketNumber(e.target.value);
                                 }}
                             >
+                                <MenuItem value="0">0</MenuItem>
                                 <MenuItem value="1">1</MenuItem>
                                 <MenuItem value="2">2</MenuItem>
                                 <MenuItem value="3">3</MenuItem>

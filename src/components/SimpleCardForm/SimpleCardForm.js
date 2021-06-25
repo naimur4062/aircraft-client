@@ -41,7 +41,7 @@ const SimpleCardForm = ({ handlePayment }) => {
             </form>
             <div className="mt-5">
                 {
-                    paymentError && <h2 style={{ color: 'red' }}>{paymentError}</h2>
+                    paymentError && <h2 style={{ color: 'red' }}>Something is wrong. Please check.</h2>
                 }
                 {
                     paymentSuccess && <h2 style={{ color: 'aqua' }}>Your payment is successful.</h2>

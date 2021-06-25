@@ -10,7 +10,8 @@
 
 .description {
   border: 2px solid aqua;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   height: 85%;
+  width: 100%;
 }
