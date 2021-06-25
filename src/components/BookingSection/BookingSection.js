@@ -12,6 +12,7 @@ const BookingSection = () => {
     const [bookingData, setBookingData] = useContext(BookingContext);
     const [businessTicketNumbers, setBusinessTicketNumber] = useState(0);
     const [economyTicketNumbers, setEconomyTicketNumber] = useState(0);
+    // console.log('bookingSection', bookingData);
 
     let businessTicketPrice;
     let economyTicketPrice;

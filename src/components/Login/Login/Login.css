@@ -1,0 +1,41 @@
+.login {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.login button {
+  width: 460px;
+  height: 50px;
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 30px;
+  margin: 3px;
+}
+.login img {
+  width: 40px;
+  position: relative;
+  right: 125px;
+  border-radius: 10px;
+}
+
+.loginTitle {
+  text-align: center;
+  color: #ff4880;
+}
+
+.login .card {
+  width: 100%;
+  padding: 4%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.formControl {
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.login .card button {
+  width: 100%;
+  background-color: #ff4880;
+  color: white;
+}

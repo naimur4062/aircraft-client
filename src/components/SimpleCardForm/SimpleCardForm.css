@@ -1,0 +1,17 @@
+.StripeElement {
+  width: 500px;
+  padding: 11px 15px 11px 0;
+  background-color: whitesmoke;
+}
+.pay-btn {
+  background-color: #ff4880;
+  width: 500px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}

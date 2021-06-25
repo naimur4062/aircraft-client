@@ -1,0 +1,16 @@
+.welcome {
+  color: #ff4880;
+  text-align: center;
+}
+
+.welcome-img img {
+  width: 100%;
+  height: 90%;
+}
+
+.description {
+  border: 2px solid aqua;
+  border-radius: 20px;
+  padding: 10px;
+  height: 85%;
+}
