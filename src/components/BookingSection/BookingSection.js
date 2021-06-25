@@ -17,16 +17,16 @@ const BookingSection = () => {
     let economyTicketPrice;
     const handleUpdate = (destination) => {
         if (destination === 'Chittagong') {
-            businessTicketPrice = 200;
-            economyTicketPrice = 300;
+            businessTicketPrice = 300;
+            economyTicketPrice = 200;
         }
         else if (destination === 'India') {
-            businessTicketPrice = 400;
-            economyTicketPrice = 500;
+            businessTicketPrice = 500;
+            economyTicketPrice = 400;
         }
         else if (destination === 'USA') {
-            businessTicketPrice = 600;
-            economyTicketPrice = 800;
+            businessTicketPrice = 800;
+            economyTicketPrice = 600;
         }
         setBusinessPrice(businessTicketPrice);
         setEconomyPrice(economyTicketPrice);
@@ -60,6 +60,7 @@ const BookingSection = () => {
                             <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
+                                value={destination}
                                 onChange={(e) => {
                                     setDestination(e.target.value)
                                     handleUpdate(e.target.value)
@@ -84,6 +85,7 @@ const BookingSection = () => {
                             <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
+                                value={businessTicketNumbers}
                                 onChange={(e) => {
                                     setBusinessTicketNumber(e.target.value);
                                 }}
@@ -101,6 +103,7 @@ const BookingSection = () => {
                             <Select
                                 labelId="demo-simple-select-helper-label"
                                 id="demo-simple-select-helper"
+                                value={economyTicketNumbers}
                                 onChange={(e) => {
                                     setEconomyTicketNumber(e.target.value);
                                 }}

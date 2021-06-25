@@ -5,19 +5,9 @@ import './SeatCalculation.css'
 const SeatCalculation = () => {
     const [bookingData, setBookingData] = useContext(BookingContext);
     const { businessPrice, economyPrice, businessTicketNumbers, economyTicketNumbers } = bookingData;
-    let subTotal = (businessPrice * businessTicketNumbers) + (economyPrice * economyTicketNumbers);
-    let vat = subTotal * 0.1;
-    let total = subTotal + vat;
-
-    if (!subTotal) {
-        subTotal = 0
-    }
-    if (!vat) {
-        vat = 0
-    }
-    if (!total) {
-        total = 0
-    }
+    let subTotal = (businessPrice * businessTicketNumbers) + (economyPrice * economyTicketNumbers) | 0;
+    let vat = subTotal * 0.1 | 0;
+    let total = subTotal + vat | 0;
 
     return (
         <div className="seat-calculation mt-5">
